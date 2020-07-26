@@ -20,14 +20,17 @@ const routes = [
 	// {
 	// 	path: '/',
 	// 	name: 'VueMicroFE',
-  //   component: VueMicroFE,
-  //   props: true
+	//   component: VueMicroFE,
+	//   props: true
 	// },
 	{
 		path: '/react',
 		name: 'ReactMicroFE',
-    component: ReactMicroFE,
-    props: true
+		component: ReactMicroFE,
+		props: true,
+		beforeRouteLeave() {
+			window['unmountReactApp']('ReactApp-container');
+		}
 	},
 ];
 
