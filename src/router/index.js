@@ -1,36 +1,21 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import ReactMicroFE from '../views/ReactMicroFE.vue'
+import VueMicroFE from '../views/VueMicroFE.vue'
 Vue.use(VueRouter);
 
-// const {
-//   VUE_CHILD_APP_HOST: vueChildHost,
-//   REACT_CHILD_APP_HOST: reactChildHost
-// } = process.env;
-
-// const VueMicroFE = ({ history }) => (
-//   <MicroFrontend history={history} host="http://localhost:5001" name="VueApp" />
-// );
-
-// const ReactMicroFE = ({ history }) => (
-//   <MicroFrontend history={history} host="http://localhost:5002" name="ReactApp" />
-// );
-
 const routes = [
-	// {
-	// 	path: '/',
-	// 	name: 'VueMicroFE',
-	//   component: VueMicroFE,
-	//   props: true
-	// },
+	{
+		path: '/',
+		name: 'VueMicroFE',
+		component: VueMicroFE,
+		props: true
+	},
 	{
 		path: '/react',
 		name: 'ReactMicroFE',
 		component: ReactMicroFE,
 		props: true,
-		beforeRouteLeave() {
-			window['unmountReactApp']('ReactApp-container');
-		}
 	},
 ];
 

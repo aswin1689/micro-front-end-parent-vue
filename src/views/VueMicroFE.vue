@@ -1,20 +1,20 @@
 <template>
   <div>
-    <MicroFrontEnd history="{}" :host="url" name="ReactApp" />
+    <MicroFrontEnd history="{}" :host="url" name="VueApp" />
   </div>
 </template>
 <script>
 import MicroFrontEnd from "../components/MicroFrontEnd";
 
 export default {
-  name: "ReactMicroFE",
+  name: "VueMicroFE",
   components: {
     MicroFrontEnd,
   },
-  data() {
-    return {
-      url: process.env.VUE_APP_REACT_CHILD_HOST,
-    };
-  },
+  data() { 
+    return { 
+        url: process.env.VUE_APP_VUE_CHILD_HOST, 
+    }
+}
 };
 </script>
