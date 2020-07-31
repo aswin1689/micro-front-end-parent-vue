@@ -20,8 +20,9 @@ export default {
       .then((manifest) => {
         const script = document.createElement("script");
         script.id = scriptId;
-		script.crossOrigin = "";
-		const appSrc = manifest.files["main.js"] || manifest.files["main.umd.min.js"]
+        script.crossOrigin = "";
+        const appSrc =
+          manifest.files["main.js"] || manifest.files["main.umd.min.js"];
         script.src = `${host}${appSrc}`;
         script.onload = this.renderMicroFrontend;
         document.head.appendChild(script);
@@ -29,7 +30,6 @@ export default {
   },
   beforeDestroy() {
     const { name } = this;
-    console.log(name);
     window[`unmount${name}`](`${name}-container`);
   },
   methods: {
