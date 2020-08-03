@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <h1>Bolt</h1>
     <div id="nav">
       <router-link to="/">Vue App</router-link>|
       <router-link to="/react">React App</router-link>
