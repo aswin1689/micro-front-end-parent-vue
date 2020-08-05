@@ -2,7 +2,8 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import ReactMicroFE from '../views/ReactMicroFE.vue'
 import VueMicroFE from '../views/VueMicroFE.vue'
-Vue.use(VueRouter);
+
+if (!window.VueRouter) Vue.use(VueRouter)
 
 const routes = [
 	{
